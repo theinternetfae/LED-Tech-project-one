@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-color: #F5F6F8;
+  --accent: #2080ED;
+  --muted-one: #3A3A3A;
+}
+
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --font-castoro: "Castoro", serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+@layer components {
+ 
+  .layout {
+    @apply border min-h-svh flex;
+
+    .side-bar {
+      @apply shadow-lg w-[25%] bg-white;
+
+      h1 {
+        @apply border border-[var(--bg-color)] border-[0px_4px_4px_0px] text-[var(--accent)] h-18 flex items-end font-bold font-manrope text-4xl p-[0px_0px_4px_16px];
+      }
+    }
+
+    .body-cont {
+      @apply flex flex-col gap-2 w-full;
+
+      .header {
+        @apply h-18 bg-white shadow-sm flex items-center px-4;
+
+        .header-one {
+          @apply w-[85%] h-full flex items-center justify-center;
+        
+          .search-bar {
+            @apply w-[40%] bg-[var(--bg-color)] p-[6px_10px] rounded-lg text-[var(--muted-one)] flex justify-between items-center font-manrope font-bold;
+          
+            p {
+              @apply w-[80%] text-xs; 
+            }
+          }
+        }
+
+        .header-two {
+          @apply w-[15%] h-full flex items-center justify-around text-[var(--muted-one)];
+
+          .with-notif {
+            @apply relative w-5;
+
+            .notif {
+              @apply absolute w-3 h-3 rounded-full right-0 text-[8px] font-bold text-center 
+              first:bg-[#2080ED];
+
+              p {
+                @apply text-white;
+              }
+            }
+
+            .notif-one {
+              @apply bg-[#237141]
+            }
+
+            .notif-two {
+              @apply bg-[#DF2C29]
+            }
+          }
+
+          img {
+            @apply h-10 w-10 object-cover rounded-full
+          }
+        }
+      }
+    }
+  }
+
+}
