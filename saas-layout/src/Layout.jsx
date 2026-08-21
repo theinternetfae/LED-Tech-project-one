@@ -1,4 +1,5 @@
 import Navigation from "./Navigation.jsx";
+import { Outlet } from "react-router-dom";
 
 function Layout() {
     return ( 
@@ -30,7 +31,7 @@ function Layout() {
                         </div>
                         
                         <div className="with-notif">
-                            <i class="bi bi-bell"></i>
+                            <i className="bi bi-bell"></i>
                             <span className="notif notif-two">
                                 <p>14</p>
                             </span>
@@ -41,6 +42,10 @@ function Layout() {
                 
                 </div>
             
+                <div className="outlet-body">
+                    <Outlet/>
+                </div>
+
             </section>
         </div>
     );

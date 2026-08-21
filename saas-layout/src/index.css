@@ -28,15 +28,14 @@ body {
       @apply shadow-lg w-[25%] bg-white flex flex-col min-h-screen;
 
       h1 {
-        @apply border border-[var(--bg-color)] border-[0px_4px_4px_0px] text-[var(--accent)] h-18 flex items-end font-bold font-manrope text-4xl p-[0px_0px_4px_16px];
+        @apply border border-[var(--bg-color)] border-[0px_4px_4px_0px] text-[var(--accent)] h-[10%] flex items-end font-bold font-manrope text-4xl p-[0px_0px_4px_16px];
       }
 
       .nav-cont {
         @apply p-4 flex flex-col gap-3;
 
         .nav {
-          @apply flex gap-2 p-2 rounded-xl font-semibold text-sm cursor-pointer text-[var(--muted-one)]
-          first:shadow-lg first:text-black; 
+          @apply flex gap-2 p-2 rounded-xl font-semibold text-sm cursor-pointer text-[var(--muted-one)] transition duration-300 ease-in-out;
         }
       }
 
@@ -67,7 +66,7 @@ body {
       @apply flex flex-col gap-2 w-full;
 
       .header {
-        @apply h-18 bg-white shadow-sm flex items-center px-4;
+        @apply h-[10%] bg-white shadow-sm flex items-center px-4;
 
         .header-one {
           @apply w-[85%] h-full flex items-center justify-center;
@@ -108,6 +107,10 @@ body {
             @apply h-10 w-10 object-cover rounded-full
           }
         }
+      }
+
+      .outlet-body {
+        @apply border h-[90%];
       }
     }
   }

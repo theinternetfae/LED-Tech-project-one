@@ -1,24 +1,29 @@
+import { Link, useLocation } from "react-router-dom";
+
 function Navigation() {
+
+    const location = useLocation();
+
     return (
         <div className="side-bar">
             <h1>EliteCo</h1>    
             
             <section className="nav-cont">
                 
-                <div className="nav">
+                <Link to='/' className={`nav ${location.pathname === '/' ? 'shadow-lg text-black' : ''}`}>
                     <i className="bi bi-columns-gap"></i>
                     <p>Dashboard</p>
-                </div>
+                </Link>
 
-                <div className="nav">
+                <Link to='/task' className={`nav ${location.pathname === '/task' ? 'shadow-lg text-black' : ''}`}>
                     <i className="bi bi-clipboard2-check"></i>
                     <p>Task Management</p>
-                </div>
+                </Link>
 
-                <div className="nav">
+                <Link to='/budget' className={`nav ${location.pathname === '/budget' ? 'shadow-lg text-black' : ''}`}>
                     <i className="bi bi-piggy-bank"></i>
                     <p>Budget</p>
-                </div>
+                </Link>
                 
                 <div className="nav">
                     <i className="bi bi-chat-dots"></i>
