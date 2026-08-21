@@ -1,10 +1,9 @@
+import Navigation from "./Navigation.jsx";
+
 function Layout() {
     return ( 
         <div className="layout">
-            <section className="side-bar">
-                <h1>EliteCo</h1>    
-                Sidebar
-            </section>
+            <Navigation/>
 
             <section className="body-cont">
                 
@@ -41,8 +40,6 @@ function Layout() {
                     </div>
                 
                 </div>
-                
-                <span>Body</span>
             
             </section>
         </div>

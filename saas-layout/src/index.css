@@ -5,6 +5,9 @@
   --bg-color: #F5F6F8;
   --accent: #2080ED;
   --muted-one: #3A3A3A;
+  --muted-two: #A5A5A5;
+  --green: #237141;
+  --red: #DF2C29;
 }
 
 @theme {
@@ -22,10 +25,41 @@ body {
     @apply border min-h-svh flex;
 
     .side-bar {
-      @apply shadow-lg w-[25%] bg-white;
+      @apply shadow-lg w-[25%] bg-white flex flex-col min-h-screen;
 
       h1 {
         @apply border border-[var(--bg-color)] border-[0px_4px_4px_0px] text-[var(--accent)] h-18 flex items-end font-bold font-manrope text-4xl p-[0px_0px_4px_16px];
+      }
+
+      .nav-cont {
+        @apply p-4 flex flex-col gap-3;
+
+        .nav {
+          @apply flex gap-2 p-2 rounded-xl font-semibold text-sm cursor-pointer text-[var(--muted-one)]
+          first:shadow-lg first:text-black; 
+        }
+      }
+
+      .quick-handler {
+        @apply p-3 mt-auto flex flex-col gap-2;
+
+        .divider {
+          @apply border border-[var(--muted-two)]
+        }
+
+        .acc-handler {
+          @apply flex gap-2 p-2 cursor-pointer;
+
+        }
+
+        .one {
+          @apply text-[var(--muted-one)];
+        }
+
+        .two {
+          @apply text-[var(--red)];
+        }
+
       }
     }
 
@@ -54,8 +88,7 @@ body {
             @apply relative w-5;
 
             .notif {
-              @apply absolute w-3 h-3 rounded-full right-0 text-[8px] font-bold text-center 
-              first:bg-[#2080ED];
+              @apply absolute w-3 h-3 rounded-full right-0 text-[8px] font-bold text-center;
 
               p {
                 @apply text-white;
@@ -63,11 +96,11 @@ body {
             }
 
             .notif-one {
-              @apply bg-[#237141]
+              @apply bg-[var(--green)];
             }
 
             .notif-two {
-              @apply bg-[#DF2C29]
+              @apply bg-[var(--red)];
             }
           }
 
