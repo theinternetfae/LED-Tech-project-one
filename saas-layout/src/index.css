@@ -65,7 +65,7 @@ body {
     }
 
     .body-cont {
-      @apply flex flex-col gap-2 w-full;
+      @apply flex flex-col w-full;
 
       .header {
         @apply h-[10%] bg-white shadow-sm flex items-center px-4;
@@ -159,7 +159,7 @@ body {
           }
 
           .dash-three {
-            @apply flex justify-between gap-5;
+            @apply flex justify-between gap-3;
 
             .activity-one {
               @apply h-100 w-[55%] bg-white rounded-2xl p-5;
@@ -235,6 +235,145 @@ body {
 
               }
             }
+          }
+        }
+
+        .task-manager {
+          @apply pt-2 h-full flex flex-col gap-3;
+
+          .welcome-nav {
+            @apply flex justify-between h-[50%];
+
+            .initial {
+              @apply flex flex-col justify-between w-[50%];
+
+              .welcome-message {
+                h2 {
+                  @apply text-3xl font-manrope font-bold
+                }
+    
+                p {
+                  @apply text-[var(--muted-one)] font-semibold text-sm
+                }
+              }
+
+              button {
+                @apply border border-3 p-[4px_10px] mr-auto flex gap-2 text-[var(--accent)] rounded-sm;
+              }
+
+              .task-handler {
+                @apply flex gap-4;
+
+                .display-format {
+                  @apply flex gap-2 p-[4px_8px] bg-white rounded-full shadow-lg text-[#545454] w-35;
+                }
+
+                .add-task {
+                  @apply flex gap-2 p-[4px_8px] bg-[var(--accent)] rounded-sm shadow-lg text-white 
+                }
+              }
+            }
+
+            .calendar-grid {
+              @apply w-[50%] p-2 flex items-center justify-end;
+
+              .calendar-cont {
+                @apply h-full w-[60%] rounded-lg bg-white;
+
+                .grid-header {
+                  @apply grid grid-cols-7 place-items-center h-[10%];
+
+                  span {
+                    @apply border border-[var(--muted-two)] w-10 h-8 text-center text-[var(--muted-one)] flex items-center justify-center;
+                  }
+                }
+
+                .grid-dates {
+                  @apply grid grid-cols-7 place-items-center h-[90%];
+
+                  span {
+                    @apply border border-[var(--muted-two)] w-10 h-10 flex items-center justify-center;
+                  }
+                }
+              }
+            }
+          }
+
+          .task-status {
+            @apply flex justify-between h-full;
+
+            .first {
+              @apply border-[#FCA5A5];
+            }
+
+            .second {
+              @apply border-[#FDE68A];
+            }
+
+            .third {
+              @apply border-[#86EFAC];
+            }
+            
+            .stat-holder {
+              @apply border-t border-t-4 rounded-lg bg-[#FFFFFF25] w-[30%] p-4 shadow-sm flex flex-col gap-3;
+
+              .about {
+                @apply flex justify-between text-[var(--muted-one)] font-bold;
+              }
+
+              .tasks-box {
+                @apply flex flex-col gap-3;
+
+                .task {
+                  @apply bg-white h-30 rounded-lg p-2 flex flex-col justify-between;
+
+                  .priority {
+                    @apply flex justify-between;
+
+                    .priority-status {
+                      @apply text-xs p-[2px_4px] rounded-lg text-white bg-[var(--accent)];
+                    }
+
+                    .high {
+                      @apply bg-[#8A38F5];
+                    }
+
+                    .mid {
+                      @apply bg-[#237141];
+                    }
+
+                    .company-name {
+                      @apply text-sm text-[var(--muted-one)] font-bold;
+                    }
+                  }
+
+                  .task-name {
+                    @apply font-bold;
+                  }
+
+                  .task-about {
+                    @apply justify-between items-center flex text-[var(--muted-two)] font-bold;
+
+                    .comm-link {
+                      @apply flex gap-3 items-center;
+                    }
+
+                    .people {
+                      @apply flex items-center;
+
+                      i {
+                        @apply text-xl;
+                      }
+
+                      img {
+                        @apply h-8 w-8 object-cover rounded-full
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
           }
         }
       }
